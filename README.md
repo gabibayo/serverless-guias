@@ -6,6 +6,8 @@ Função serverless em Python 3.12 que recebe uma requisição do Rota Vital e d
 
 **Caminho escolhido:** Caminho A, com AWS SAM CLI local (sem conta AWS).
 
+**Vídeo da execução:** https://youtu.be/rfJ6fZZ899c
+
 ## Estrutura
 
 ```
