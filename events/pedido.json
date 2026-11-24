@@ -1,0 +1,19 @@
+{
+  "body": "{\"requisicaoId\": \"R-001\", \"hospital\": \"H-Recife\", \"bolsas\": [\"O-NEG-0142\"]}",
+  "resource": "/guias",
+  "path": "/guias",
+  "httpMethod": "POST",
+  "isBase64Encoded": false,
+  "queryStringParameters": null,
+  "pathParameters": null,
+  "stageVariables": null,
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "requestContext": {
+    "resourcePath": "/guias",
+    "httpMethod": "POST",
+    "path": "/prod/guias",
+    "stage": "prod"
+  }
+}

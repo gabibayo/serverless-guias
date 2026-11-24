@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  serverless-guias - Função que gera a guia de transporte de uma requisição do Rota Vital
+
+Globals:
+  Function:
+    Timeout: 3          # Passo 5: depois trocar para 10 e rodar sam build de novo
+    MemorySize: 128
+
+Resources:
+  GuiaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: hello_world/
+      Handler: app.lambda_handler
+      Runtime: python3.12
+      Architectures:
+        - x86_64
+      Events:
+        Guias:
+          Type: Api
+          Properties:
+            Path: /guias
+            Method: post
+
+Outputs:
+  GuiasApi:
+    Description: "URL do endpoint /guias"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/guias/"
